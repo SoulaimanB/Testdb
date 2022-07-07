@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Soins de Caries</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- bootstrap cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+    <!-- title logo  -->
+    <link rel="shortcut icon" type="image" href="images/icon-1.svg">
+
+     <!-- wtssp icon  -->
+     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+     <script type="text/javascript" src="floating-wpp.min.js"></script>
+     <link rel="stylesheet" href="floating-wpp.min.css">
+ 
+
+   <style>
+    
+
+.slider{
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 800px;
+  height: 500px;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #40D3DC;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
+}
+#about{
+        margin: 50px;
+      }
+     
+   </style>
+
+</head>
+<body>
+  <div id="myDiv"></div>
+<!-- header section starts  -->
+
+<header class="header fixed-top">
+
+   <div class="container">
+
+      <div class="row align-items-center justify-content-between">
+
+         <a href="#home" class="logo">dental<span>Care.</span></a>
+
+         <nav class="nav">
+            <a href="#home">home</a>
+            <a href="#aboutservice">about service</a>
+            
+           
+         </nav>
+
+         <a href="#contact" class="link-btn">Contact</a>
+
+         <div id="menu-btn" class="fas fa-bars"></div>
+
+      </div>
+
+   </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+   <div class="container">
+
+      <div class="row min-vh-100 align-items-center">
+         <div class="content text-center text-md-left">
+            <h2>Dr.Mehdi Taimouri</h2>
+            <p><b>Cabinet dentaire spécialisé en implantologie, facettes, maladies de gencires et soins dentaires</b></p> <br> <p><b>Heures de travail : Lundi à Vendredi de 09:00 à 18:00 
+
+                Samedi de 09:00 à 12:30</b> </p>
+            <a href="#contact" class="link-btn">Contact</a>
+         </div>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="aboutservice">
+
+   <div class="container">
+    <h2>Soins de Caries</h2>
+      <div class="row align-items-center">
+
+        <!--image slider start-->
+    <div class="slider">
+        <div class="slides">
+          <!--radio buttons start-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--radio buttons end-->
+          <!--slide images start-->
+          <div class="slide first">
+            <img src="images/sc1.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images/sc2.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images/sc3.jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="images/sc4.jpg" alt="">
+          </div>
+          <!--slide images end-->
+          <!--automatic navigation start-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!--automatic navigation end-->
+        </div>
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!--manual navigation end-->
+      </div>
+      <!--image slider end-->
+  
+      <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter = 1;
+        }
+      }, 3000);
+      </script>
+
+         
+
+         <div class="col-md-6 content">
+            <br>
+            <br>
+            <br>
+           
+            
+            <h3>De vrais soins de santé pour votre famille</h3>
+            <p>Les caries dentaires sont des infections des dents qui touchent aussi bien les enfants que les adultes, et qui peuvent évoluer vers des maladies graves si elles ne sont pas traitées à temps. Une prise en charge dès les premiers signes permet cependant d’éviter les complications et de retrouver l’usage de dents en bonne santé. Consultez un chirurgien-dentiste Dentego en prenant rendez-vous directement via notre site internet et faites traiter votre ou vos dents cariée(s) Il est important de s’occuper d’une carie dentaire très rapidement. Beaucoup de personnes ont tendance à ne pas prendre ce problème au sérieux et à patienter, en espérant que les choses s’arrangeront d’elles-mêmes. Faire traiter ses caries dentaires, c’est éviter de devoir recourir à :
+
+                La pose d’un plombage dentaire ;
+                La pose d’une couronne ;
+                La dévitalisation de la dent.</p>
+            <a href="#contact" class="link-btn">Contact</a>
+         </div>
+
+         
+
+      </div>
+
+   </div>
+
+</section>
+
+<!-- about section ends -->
+
+
+
+
+<!-- contact section starts  -->
+
+
+ 
+ <!-- contact section ends -->
+
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container container">
+ 
+       <div class="box">
+          <i class="fas fa-phone"></i>
+          <h3>Telephone</h3>
+          <p>+212 5 24 48 49 49</p>
+          
+       </div>
+       
+       <div class="box">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>address</h3>
+          <p>Contact@drmehditaimouri.com</p>
+       </div>
+ 
+       <div class="box">
+          <i class="fas fa-clock"></i>
+          <h3>heurs de travail</h3>
+          <p>9:00 à 18:30</p>
+       </div>
+ 
+       <div class="box">
+          <i class="fas fa-envelope"></i>
+          <h3>email address</h3>
+          <p>Contact@drmehditaimouri.com</p>
+          
+       </div>
+ 
+    </div>
+ 
+    <div class="credit"> &copy; copyright by Soulben </div>
+ 
+ </section>
+ 
+ 
+ 
+ <!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
